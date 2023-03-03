@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "t_s3_bucket" {
-  bucket = "crawcostatefilebucket-011"  
+  bucket = "CCS-EKS-DEV-statefile"  
   lifecycle {
 	prevent_destroy = false
   }
@@ -29,7 +29,7 @@ resource "aws_s3_bucket" "t_s3_bucket" {
   }
 }
 resource "aws_dynamodb_table" "t_dynamo_locks" {
-	name = "crawco-lock-db-01"
+	name = "EKS-lock-db"
 	billing_mode = "PAY_PER_REQUEST"
 	hash_key = "LockID"
 	
