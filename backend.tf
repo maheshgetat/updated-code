@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "crawcostatefilebucket-011"
+    bucket = "CCS-EKS-DEV-statefile"
     key    = "tfstate"
     region = "us-east-1"
   }
